@@ -30,7 +30,7 @@ var express = require('express')
 var cors = require('cors')
 var app = express()
 
-var whitelist = ['http://http://localhost:1234/', 'http://example2.com']
+var whitelist = ['http://localhost:1234/', 'http://example2.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -47,7 +47,7 @@ app.get('/products/:id', cors(corsOptions), function (req, res, next) {
 
 app.listen(80, function () {
   console.log('CORS-enabled web server listening on port 80')
-})
+});
 
 /* rest of code goes here*/
 let auth = require('./auth')(app);
