@@ -26,18 +26,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const { check, validationResult } = require('express-validator');
 
-let allowedOrigins = ['http://localhost:8080', 'http://testsite.com', 'http://localhost:1234'];
-const cors = require('cors');
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) { // If a specific origin isn’t found on the list of allowed origins
-      let message = 'The CORS policy for this application doesn’t allow access from origin ' + origin;
-      return callback(new Error(message), false);
-    }
-    return callback(null, true);
-  }
-}));
+var express = require('express')
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
+
+app.get('/products/:id', function (req, res, next) {
+  res.json({ msg: 'This is CORS-enabled for all origins!' })
+})
+
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+});
 
 /* rest of code goes here*/
 let auth = require('./auth')(app);
