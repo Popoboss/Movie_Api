@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 app.get('/movies', (req, res) => {
   Movies.find()
     .then((movies) => {
-      res.status(201).json(movies);
+      res.status(201).json({ result: movies });
     })
     .catch((error) => {
       console.error(error);
@@ -282,3 +282,5 @@ const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);
 });
+
+//testing

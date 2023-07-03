@@ -104,3 +104,6 @@ Timestamp: Mon Jun 20 2022 17:44:21 GMT-0400 (Eastern Daylight Time)
 ::1 - - [27/Jul/2022:23:36:19 +0000] "POST /users/Luigi?Username=Luigi&Password=password HTTP/1.1" 404 151 "-" "PostmanRuntime/7.29.2"
 ::1 - - [27/Jul/2022:23:40:48 +0000] "GET /login/Hercules?Username=Hercules&Password=Herculespassword HTTP/1.1" 404 153 "-" "PostmanRuntime/7.29.2"
 ::1 - - [27/Jul/2022:23:41:08 +0000] "POST /login/Hercules?Username=Hercules&Password=Herculespassword HTTP/1.1" 404 154 "-" "PostmanRuntime/7.29.2"
+127.0.0.1 - - [30/Jun/2023:17:53:40 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+127.0.0.1 - - [30/Jun/2023:18:14:32 +0000] "GET /genre/ HTTP/1.1" 404 145 "-" "PostmanRuntime/7.29.2"
+127.0.0.1 - - [30/Jun/2023:18:14:38 +0000] "GET /user/ HTTP/1.1" 404 144 "-" "PostmanRuntime/7.29.2"
