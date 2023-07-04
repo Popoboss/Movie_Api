@@ -1,9 +1,5 @@
-
-mongoose = require('mongoose'),
-
-
-  dotenv = require('dotenv')
-Models = require('./models.js')
+const mongoose = require('mongoose');
+const Models = require('./models.js');
 
 const Movies = Models.Movie;
 const Users = Models.User;
@@ -26,15 +22,12 @@ let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const cors = require('cors')
-app.use(cors())
-
 
 const { check, validationResult } = require('express-validator');
 
+const cors = require('cors');
 
-
-
+app.use(cors());
 
 /* rest of code goes here*/
 let auth = require('./auth')(app);
@@ -47,7 +40,7 @@ app.use(bodyParser.json());
 app.get('/movies', (req, res) => {
   Movies.find()
     .then((movies) => {
-      res.status(201).json({ result: movies });
+      res.status(201).json(movies);
     })
     .catch((error) => {
       console.error(error);
@@ -289,5 +282,3 @@ const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);
 });
-
-//testing
