@@ -118,3 +118,7 @@ Timestamp: Mon Jun 20 2022 17:44:21 GMT-0400 (Eastern Daylight Time)
 127.0.0.1 - - [05/Jul/2023:11:58:26 +0000] "GET /movies2 HTTP/1.1" 404 146 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 127.0.0.1 - - [05/Jul/2023:12:27:51 +0000] "GET /films HTTP/1.1" 404 144 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 127.0.0.1 - - [05/Jul/2023:12:27:55 +0000] "GET /film HTTP/1.1" 404 143 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+127.0.0.1 - - [05/Jul/2023:12:30:00 +0000] "GET /films HTTP/1.1" 404 144 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+127.0.0.1 - - [05/Jul/2023:12:30:48 +0000] "GET /films HTTP/1.1" 404 144 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+127.0.0.1 - - [05/Jul/2023:12:40:02 +0000] "GET /user HTTP/1.1" 404 143 "-" "PostmanRuntime/7.29.2"
+127.0.0.1 - - [05/Jul/2023:12:40:09 +0000] "GET /films HTTP/1.1" 404 144 "-" "PostmanRuntime/7.29.2"
