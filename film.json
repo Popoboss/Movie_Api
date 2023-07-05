@@ -1,0 +1,16 @@
+{
+    "_id": {
+        "$oid": "62d9daea93f26e88e87362d4"
+    },
+    "Title": "Aladdin",
+    "Description": "A kindhearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
+    "Genre": {
+        "Name": "Adventure",
+        "Description": "An adventure film is a form of adventure fiction, and is a genre of film. Subgenres of adventure films include swashbuckler films, pirate films, and survival films. Adventure films may also be combined with other film genres such as action, animation, comedy, drama, fantasy, science fiction, family, horror, or war."
+    },
+    "Director": {
+        "Name": "Ron Clements",
+        "Bio": "Ron Clements was born on April 25, 1953 in Sioux City, Iowa, USA. He is a writer and director, known for Hercules, Aladdin and The Princess and the Frog.",
+        "Birth": "1953"
+    },
+}

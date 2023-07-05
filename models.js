@@ -15,6 +15,21 @@ let movieSchema = mongoose.Schema({
   ImagePath: String,
   Featured: Boolean
 });
+let filmSchema = mongoose.Schema({
+  Title: { type: String, required: true },
+  Description: { type: String, required: true },
+  Genre: {
+    Name: String,
+    Description: String
+  },
+  Director: {
+    Name: String,
+    Bio: String,
+  },
+  Actors: [String],
+  ImagePath: String,
+  Featured: Boolean
+});
 
 const bcrypt = require('bcrypt');
 
@@ -38,6 +53,8 @@ userSchema.methods.validatePassword = function (password) {
 
 let Movie = mongoose.model('Movie', movieSchema);
 let User = mongoose.model('User', userSchema);
+let Film = mongoose.model('Film', userSchema);
 
-module.exports.Movie = Movie
-module.exports.User = User
+module.exports.Movie = Movie;
+module.exports.User = User;
+module.exports.Film = Film;
