@@ -3,16 +3,12 @@ const Models = require('./models.js');
 
 const Movies = Models.Movie;
 const Users = Models.User;
-const Films = Models.Film;
 
 
 
 //mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect('mongodb+srv://Wdiaz:Minato1028@myflixdb.pgimx.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-//mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const express = require('express'),
@@ -29,8 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const { check, validationResult } = require('express-validator');
 
-const cors = require('cors');
 
+const cors = require('cors');
 app.use(cors());
 
 /* rest of code goes here*/
@@ -52,17 +48,6 @@ app.get('/movies', (req, res) => {
     });
 });
 
-app.get('/movies2', (req, res) => {
-  console.log("here")
-  Films.find()
-    .then((movies) => {
-      res.status(201).json(movies);
-    })
-    .catch((error) => {
-      console.error(error);
-      res.status(500).send('Error: ' + error);
-    });
-});
 // Get movies by title
 app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find({ Title: req.params.Title })
