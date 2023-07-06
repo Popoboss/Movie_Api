@@ -27,11 +27,7 @@ const { check, validationResult } = require('express-validator');
 
 
 const cors = require('cors');
-let allowedOrigins = [
-  'http://localhost:1234',
-  'https://wlad-movie-apps.herokuapp.com/',
-  'https://Popoboss.github.io/myFlix-Angular-client'
-];
+app.use(cors());
 
 /* rest of code goes here*/
 let auth = require('./auth')(app);
